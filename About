@@ -1,0 +1,12 @@
+gcc trab_client.c -o remcp
+gcc trab_server.c -lpthread -o remcpserv
+
+Execução:
+Inicia Servidor:
+./remcpserv 8190 2 80000000
+
+Cliente envio p/ server:
+./remcp Downloads/ubuntu-24.04.1-desktop-amd64.iso 192.168.1.12:/tmp/teste/ubuntu
+
+Cliente recebe do server:
+./remcp 192.168.1.12:/tmp/teste/ubuntu Downloads/ubuntu-24.04.1-desktop-amd64.iso
